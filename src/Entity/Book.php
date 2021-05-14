@@ -8,7 +8,7 @@ use ApiPlatform\Core\Annotation\ApiResource;
 
 
 /**
- * @ApiResource()
+ * @ApiResource(graphql={"item_query", "collection_query", "create"})
  * @ORM\Entity(repositoryClass=BookRepository::class)
  */
 class Book
