@@ -5,10 +5,19 @@ namespace App\Entity;
 use App\Repository\BookRepository;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
-
+use App\Resolvers\BookResolver;
 
 /**
- * @ApiResource(graphql={"item_query", "collection_query", "create"})
+ * @ApiResource(
+ *      graphql={
+ *          "item_query", 
+ *          "collection_query", 
+ *          "create",
+ *          "retrievedQuery": {
+ *              "item_query": BookResolver::class
+ *          }
+ *      }
+ * )
  * @ORM\Entity(repositoryClass=BookRepository::class)
  */
 class Book
