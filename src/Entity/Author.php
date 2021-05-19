@@ -10,7 +10,16 @@ use ApiPlatform\Core\Annotation\ApiResource;
 
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *      mercure=true,
+ *      graphql={
+ *          "item_query", 
+ *          "collection_query", 
+ *          "create",
+ *          "update",
+ *          "delete"
+ *      }
+ * )
  * @ORM\Entity(repositoryClass=AuthorRepository::class)
  */
 class Author

@@ -9,10 +9,13 @@ use App\Resolvers\BookResolver;
 
 /**
  * @ApiResource(
+ *      mercure=true,
  *      graphql={
  *          "item_query", 
  *          "collection_query", 
  *          "create",
+ *          "update",
+ *          "delete",
  *          "notRetrievedQuery": {
  *              "item_query":  BookResolver::class,
  *              "args": {}

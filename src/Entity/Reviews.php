@@ -7,7 +7,16 @@ use App\Repository\ReviewsRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *      mercure=true,
+ *      graphql={
+ *          "item_query", 
+ *          "collection_query", 
+ *          "create",
+ *          "update",
+ *          "delete"
+ *      }
+ * )
  * @ORM\Entity(repositoryClass=ReviewsRepository::class)
  */
 class Reviews
