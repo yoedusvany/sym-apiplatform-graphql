@@ -13,6 +13,10 @@ use App\Resolvers\BookResolver;
  *          "item_query", 
  *          "collection_query", 
  *          "create",
+ *          "notRetrievedQuery": {
+ *              "item_query":  BookResolver::class,
+ *              "args": {}
+ *          }, 
  *          "retrievedQueryWithoutParams": {
  *              "item_query": BookResolver::class
  *          },
