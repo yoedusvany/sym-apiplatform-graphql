@@ -13,8 +13,14 @@ use App\Resolvers\BookResolver;
  *          "item_query", 
  *          "collection_query", 
  *          "create",
- *          "retrievedQuery": {
+ *          "retrievedQueryWithoutParams": {
  *              "item_query": BookResolver::class
+ *          },
+ *          "retrievedQuery": {
+ *              "item_query": BookResolver::class,
+ *              "args": {
+ *                   "isbn": {"type": "String"}
+ *               }
  *          }
  *      }
  * )
