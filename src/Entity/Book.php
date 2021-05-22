@@ -6,13 +6,16 @@ use App\Repository\BookRepository;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Resolvers\BookResolver;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\OrderFilter;
+use ApiPlatform\Core\Annotation\ApiFilter;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 
 /**
  * @ApiResource(
  *      mercure=true,
  *      graphql={
  *          "item_query", 
- *          "collection_query", 
+ *          "collection_query",
  *          "create",
  *          "update",
  *          "delete",
@@ -31,6 +34,8 @@ use App\Resolvers\BookResolver;
  *          }
  *      }
  * )
+ * @ApiFilter(SearchFilter::class, properties = {"title": "partial", "description": "partial"})
+ * 
  * @ORM\Entity(repositoryClass=BookRepository::class)
  */
 class Book
