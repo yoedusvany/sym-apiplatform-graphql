@@ -12,9 +12,12 @@ use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 
 /**
  * @ApiResource(
+ *      attributes={"pagination_items_per_page"=5},
  *      graphql={
  *          "item_query", 
- *          "collection_query",
+ *          "collection_query": {
+ *              "pagination_type"= "page"
+ *          },
  *          "create",
  *          "update",
  *          "delete",
