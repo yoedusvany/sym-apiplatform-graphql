@@ -7,11 +7,11 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
-
+use ApiPlatform\Core\Annotation\ApiFilter;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 
 /**
  * @ApiResource(
- *      mercure=true,
  *      graphql={
  *          "item_query", 
  *          "collection_query", 
@@ -20,6 +20,8 @@ use ApiPlatform\Core\Annotation\ApiResource;
  *          "delete"
  *      }
  * )
+ * @ApiFilter(SearchFilter::class, properties = {"name": "partial"})
+ * 
  * @ORM\Entity(repositoryClass=AuthorRepository::class)
  */
 class Author

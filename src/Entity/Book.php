@@ -12,7 +12,6 @@ use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 
 /**
  * @ApiResource(
- *      mercure=true,
  *      graphql={
  *          "item_query", 
  *          "collection_query",

@@ -8,7 +8,6 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ApiResource(
- *      mercure=true,
  *      graphql={
  *          "item_query", 
  *          "collection_query", 
