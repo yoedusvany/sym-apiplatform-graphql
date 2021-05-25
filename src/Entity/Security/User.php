@@ -9,7 +9,15 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *      graphql={
+ *          "item_query", 
+ *          "collection_query",
+ *          "create",
+ *          "update",
+ *          "delete"
+ *      }
+ * )
  * @ORM\Entity(repositoryClass=UserRepository::class)
  */
 class User implements UserInterface
