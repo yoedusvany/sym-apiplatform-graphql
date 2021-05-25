@@ -24,11 +24,10 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  *        "upload"={
  *           "mutation": CreateMediaObjectResolver::class,
  *           "deserialize": false,
- *           "args"= {
+ *           "args"={
  *              "file"={"type": "Upload!", "description": "The file to upload"}
- *              } 
- *            }
- *          }
+ *           }
+ *        }
  *     }
  * )
  * @Vich\Uploadable
@@ -49,7 +48,7 @@ class MediaObject
      *
      * @Groups({"media_object_read"})
      *
-     *@ApiProperty(iri="http://schema.org/contentUrl")]
+     *@ApiProperty(iri="http://schema.org/contentUrl")
     */
     public $contentUrl;
 

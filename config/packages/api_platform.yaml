@@ -1,6 +1,23 @@
 api_platform:
     formats:
         multipart: ['multipart/form-data']
+        jsonld:
+            mime_types: ['application/ld+json']
+        json:
+            mime_types: ['application/json']
+        html:
+            mime_types: ['text/html']
+    graphql:
+        # The default IDE (graphiql or graphql-playground) used when going to the GraphQL endpoint. False to disable.
+        default_ide: 'graphiql'
+
+        graphiql:
+            # Enabled by default with installed webonyx/graphql-php and Twig.
+            enabled: true
+
+        graphql_playground:
+            # Enabled by default with installed webonyx/graphql-php and Twig.
+            enabled: true
     mapping:
         paths: ['%kernel.project_dir%/src/Entity']
     patch_formats:

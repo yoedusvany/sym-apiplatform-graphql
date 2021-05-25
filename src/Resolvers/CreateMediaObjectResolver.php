@@ -1,7 +1,7 @@
 <?php
 // api/src/Resolver/CreateMediaObjectResolver.php
 
-namespace App\Resolver;
+namespace App\Resolvers;
 
 use ApiPlatform\Core\GraphQl\Resolver\MutationResolverInterface;
 use App\Entity\MediaObject;
