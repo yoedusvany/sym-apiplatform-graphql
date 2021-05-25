@@ -39,9 +39,13 @@ class Author
     private $name;
 
     /**
-     * @ORM\Column(type="blob")
+     * @var MediaObject|null
+     *
+     * @ORM\ManyToOne(targetEntity=MediaObject::class)
+     * @ORM\JoinColumn(nullable=true)
+     * @ApiProperty(iri="http://schema.org/image")
      */
-    private $photo;
+    public $image;
 
     /**
      * @ORM\OneToMany(targetEntity=Book::class, mappedBy="author", orphanRemoval=true)
@@ -69,19 +73,7 @@ class Author
 
         return $this;
     }
-
-    public function getPhoto()
-    {
-        return $this->photo;
-    }
-
-    public function setPhoto($photo): self
-    {
-        $this->photo = $photo;
-
-        return $this;
-    }
-
+    
     /**
      * @return Collection|Book[]
      */

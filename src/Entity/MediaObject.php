@@ -20,12 +20,12 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  *     normalizationContext={
  *         "groups"={"media_object_read"}
  *     },
- *     graphql= {
+ *     graphql={
  *        "upload"={
  *           "mutation": CreateMediaObjectResolver::class,
  *           "deserialize": false,
  *           "args"= {
- *              "file": {"type": "Upload!", "description": "The file to upload"}
+ *              "file"={"type": "Upload!", "description": "The file to upload"}
  *              } 
  *            }
  *          }

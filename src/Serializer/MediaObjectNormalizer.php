@@ -15,7 +15,7 @@ final class MediaObjectNormalizer implements ContextAwareNormalizerInterface, No
 
     private const ALREADY_CALLED = 'MEDIA_OBJECT_NORMALIZER_ALREADY_CALLED';
 
-    public function __construct(private StorageInterface $storage)
+    public function __construct(StorageInterface $storage)
     {
     }
 

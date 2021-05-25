@@ -1,7 +1,6 @@
 # api/config/packages/vich_uploader.yaml
 vich_uploader:
     db_driver: orm
-
     mappings:
         media_object:
             uri_prefix: /media
