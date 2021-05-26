@@ -27,14 +27,8 @@ security:
             stateless: true
             anonymous: true
 
-        graphql-playground:
-            methods: [GET,POST,PUT,PATCH,DELETE]
-            pattern: ^/api/graphql/graphql_playground
-            stateless: true
-            anonymous: true
-
         graphql:
-            methods: [GET,POST,PUT,PATCH,DELETE]
+            methods: [GET]
             pattern: ^/api/graphql
             stateless: true
             anonymous: true
@@ -74,5 +68,3 @@ security:
         - { path: ^/api/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/api/docs, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/api/graphql/graphql_playground, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/api/graphql, role: IS_AUTHENTICATED_ANONYMOUSLY }

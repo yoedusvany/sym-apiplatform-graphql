@@ -64,11 +64,24 @@ class MediaObject
      * @var string|null
      *
      * @ORM\Column(nullable=true)
+     * @ApiProperty(iri="http://schema.org/contentUrl")
      */
     public $filePath;
 
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getFilePath(): ?string
+    {
+        return $this->filePath;
+    }
+
+    public function setFilePath(?string $filePath): self
+    {
+        $this->filePath = $filePath;
+
+        return $this;
     }
 }
