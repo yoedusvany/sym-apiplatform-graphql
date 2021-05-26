@@ -1,5 +1,5 @@
 <?php
-// api/src/Resolver/CreateMediaObjectResolver.php
+// api/src/Resolvers/CreateMediaObjectResolver.php
 
 namespace App\Resolvers;
 
