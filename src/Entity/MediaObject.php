@@ -29,7 +29,6 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  *              } 
  *            }
  *          }
- *     }
  * )
  * @Vich\Uploadable
  */
