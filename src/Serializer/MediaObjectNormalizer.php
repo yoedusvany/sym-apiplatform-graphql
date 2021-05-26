@@ -14,13 +14,15 @@ final class MediaObjectNormalizer implements ContextAwareNormalizerInterface, No
     use NormalizerAwareTrait;
 
     private const ALREADY_CALLED = 'MEDIA_OBJECT_NORMALIZER_ALREADY_CALLED';
+    private $storage;
 
     public function __construct(StorageInterface $storage)
     {
+        $this->storage = $storage;
     }
 
     //public function normalize($object, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
-    public function normalize($object, ?string $format = null, array $context = []): mixed
+    public function normalize($object, ?string $format = null, array $context = [])
     {
         $context[self::ALREADY_CALLED] = true;
 
