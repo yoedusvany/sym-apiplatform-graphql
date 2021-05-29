@@ -104,4 +104,9 @@ class Author
 
         return $this;
     }
+
+    public function getFoo(): string
+    {
+        return $this->name;
+    }
 }
