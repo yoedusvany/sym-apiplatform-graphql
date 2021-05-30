@@ -15,7 +15,9 @@ use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
  * @ApiResource(
  *      graphql={
  *          "item_query", 
- *          "collection_query", 
+ *          "collection_query": {
+ *              "pagination_type"= "page"
+ *          },
  *          "create",
  *          "update",
  *          "delete"
